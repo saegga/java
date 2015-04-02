@@ -17,6 +17,7 @@ public class Example {
             text[++k] = (char) ch;
             System.out.print((char) ch);
         }
+        fileReader.close();
         String l = "";
         text[0] = ' ';
         for (int i = 1; i < text.length; i++) {
