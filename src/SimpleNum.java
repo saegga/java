@@ -6,30 +6,16 @@ import java.util.ArrayList;
 //Задание 0-3
 public class SimpleNum {
     public static void main(String[] args) {
+           public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        int[] mass;
-        for (int i = 2; i < 100; i++) {
-          int k = 0;
-          int  count = 0;
-            if (list.isEmpty()) {
-                list.add(2);
-            } else {
-                mass = new int[list.size()];
-                for (Integer integer : list) {
-                    mass[k] = i % integer;
-                    k++;
-
-                }
-                    for (int mas : mass) {
-                        if (mas == 0) {
-                            count++;
-                        }
-                    }
-                if (count == 0) {
-                    list.add(i);
-
-                }
-
+        list.add(2);
+        for (int i = 2; i < 1000; i++) {
+            double temp = 1.0;
+            for (Integer integer : list) {
+                temp *= i % integer;
+            }
+            if (temp != 0) {
+                list.add(i);
             }
         }
         System.out.println(list);
